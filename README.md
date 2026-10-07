@@ -1,36 +1,36 @@
-﻿# Misconception Lab
+﻿# Misconception Lab — Next Founders 2026
 
-EurekaDev 2026 Coding Track prototype.
+Misconception Lab turns learning mistakes into testable hypotheses instead of treating every wrong answer as the same signal.
 
 ## Problem
-Most study software treats wrong answers as a single category. Two students can miss the same question for completely different reasons: selecting the wrong concept, applying the right concept incorrectly, missing a constraint, or guessing with poor confidence calibration.
+A wrong answer can come from the wrong concept, a procedural mistake, missed constraints, or poor confidence calibration. Most study software treats all of these failures the same and responds with more generic practice.
 
-## Solution
-Misconception Lab turns each error into evidence for a lightweight causal profile. It then chooses a next test designed to distinguish the most likely failure mode rather than simply giving more random practice.
+## Product
+The learner records the topic, suspected error cause, and confidence. A transparent evidence engine updates a misconception profile and recommends a next discriminating test designed to separate competing explanations.
 
-## Current prototype
-- runs entirely in the browser
-- records topic, suspected cause, and confidence
-- accumulates evidence weights
-- visualizes a misconception graph
-- recommends a discriminating next test
-- persists state in localStorage
+## Startup model
+Initial customer: independent tutors, tutoring centers, and small learning programs that need better diagnostic feedback without adopting a full LMS.
+
+Revenue path:
+- Free learner prototype
+- Tutor plan: recurring subscription for saved learners, reports, and reusable diagnostic tests
+- School/center plan: per-seat or cohort pricing
+- Optional API/integration tier for learning platforms
+
+The browser-only prototype keeps infrastructure costs low. A hosted version can scale by moving persistence to a managed backend while preserving the same inference interface.
+
+See BUSINESS_MODEL.md for assumptions, pricing logic, unit economics, and go-to-market notes.
+
+## Technical architecture
+- HTML/CSS/JavaScript frontend
+- Standalone transparent inference core in core.js
+- Local browser persistence
+- JSON export
+- Deterministic Node.js tests
+- Playwright end-to-end verification
 
 ## Run
 Open index.html in a browser.
 
-## Competition status
-Built locally for EurekaDev 2026. Nothing has been published or submitted externally.
-
-## Public links
-- Live prototype: https://muhammadzakyasshidqy-commits.github.io/misconception-lab-eurekadev-2026/
-- Demo video: https://muhammadzakyasshidqy-commits.github.io/misconception-lab-eurekadev-2026/demo.html
-
-## Demo video
-https://youtu.be/cEM0U3uLMjc
-
-## AI Assistance Disclosure
-This project was developed during EurekaDev 2026 with AI-assisted coding and writing support from ChatGPT. The project concept, competition entry, testing decisions, and final submission are owned and directed by Zaky. AI assistance was used to accelerate implementation, debugging, documentation, and test generation. The repository intentionally includes deterministic tests and a transparent inference core so judges can inspect the implemented logic.
-
 ## Competition
-Built during the EurekaDev 2026 hackathon window for the Coding Track, Computer Science + AI (Technology) category.
+Prepared for the Next Founders Hackathon 2026.
